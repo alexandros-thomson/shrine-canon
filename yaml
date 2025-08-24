@@ -1,0 +1,21 @@
+name: relic-v009X-A1-shrine-pulse
+
+on:
+  workflow_dispatch:    # Manual trigger from Actions tab
+  push:
+    paths:
+      - 'pulse-manifest.json'
+      - '.github/workflows/relic-v009X-A1-shrine-pulse.yml'
+
+jobs:
+  shrine-pulse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout canon
+        uses: actions/checkout@v4
+
+      - name: Read manifest
+        run: cat pulse-manifest.json
+
+      - name: Dispatch ceremonial payload
+        run: echo "Pulse dispatched at $(date -u) with manifest checksum: $(sha256sum pulse-manifest.json)"
