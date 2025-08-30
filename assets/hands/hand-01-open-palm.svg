@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="title1 desc1">
+  <title id="title1">Hand position 1 — Open palm</title>
+  <desc id="desc1">Stylized open palm facing viewer, five slightly spread fingers, gold stroke, transparent fill.</desc>
+  <g fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- fingers -->
+    <path d="M36 28 C36 16, 42 12, 46 12 C50 12, 56 16, 56 28 L56 56" />
+    <path d="M50 26 C50 14, 56 10, 60 10 C64 10, 70 14, 70 26 L70 56" />
+    <path d="M64 28 C64 18, 70 14, 74 14 C78 14, 84 18, 84 28 L84 56" />
+    <path d="M78 36 C78 26, 84 22, 88 22 C92 22, 98 26, 98 36 L98 64" />
+    <!-- thumb -->
+    <path d="M30 54 C26 46, 22 40, 26 34 C30 28, 36 28, 42 34" />
+    <!-- palm -->
+    <path d="M28 64 C34 86, 46 98, 66 98 C86 98, 98 86, 102 64 C90 72, 74 78, 60 78 C46 78, 32 72, 28 64 Z" />
+  </g>
+</svg>

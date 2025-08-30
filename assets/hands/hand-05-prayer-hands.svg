@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 120" width="140" height="120" role="img" aria-labelledby="title5 desc5">
+  <title id="title5">Hand position 5 — Prayer hands</title>
+  <desc id="desc5">Two hands pressed together in prayer, symmetrical stylized shapes, gold stroke.</desc>
+  <g fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left hand fingers -->
+    <path d="M40 20 C40 12, 46 10, 50 10 C54 10, 58 12, 58 20 L58 56" />
+    <path d="M48 22 C48 14, 54 12, 58 12 C62 12, 66 14, 66 22 L66 56" />
+    <!-- right hand fingers (mirrored) -->
+    <path d="M82 20 C82 12, 76 10, 72 10 C68 10, 64 12, 64 20 L64 56" />
+    <path d="M74 22 C74 14, 68 12, 64 12 C60 12, 56 14, 56 22 L56 56" />
+    <!-- palms -->
+    <path d="M34 60 C46 84, 64 96, 70 96 C76 96, 94 84, 106 60" />
+    <!-- joining center crease -->
+    <path d="M70 20 L70 96" stroke-opacity="0.6" />
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+/* Shrine hand small-plate defaults */
+.shrine-hand {
+  width: 44px;
+  height: auto;
+  vertical-align: middle;
+  /* Use CSS color to tint if you switch SVG stroke to currentColor */
+  color: #D4AF37;
+  margin: 0 6px;
+  display: inline-block;
+}

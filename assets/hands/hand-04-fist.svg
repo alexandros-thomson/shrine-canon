@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="title4 desc4">
+  <title id="title4">Hand position 4 — Fist</title>
+  <desc id="desc4">Stylized closed fist, compact silhouette, gold stroke with subtle inner knuckle arcs.</desc>
+  <g fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- knuckles -->
+    <path d="M36 54 C48 36, 72 36, 84 54 L84 72 C72 90, 48 90, 36 72 Z" />
+    <!-- thumb wrapped -->
+    <path d="M26 64 C30 60, 34 58, 40 60 C46 62, 50 66, 52 70" />
+    <!-- subtle knuckle lines -->
+    <path d="M46 56 C54 52, 66 52, 74 56" stroke-opacity="0.9"/>
+  </g>
+</svg>

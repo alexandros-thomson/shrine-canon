@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-labelledby="title3 desc3">
+  <title id="title3">Hand position 3 — Two‑finger blessing</title>
+  <desc id="desc3">Stylized hand with index and middle fingers together (blessing pose), gold stroke.</desc>
+  <g fill="none" stroke="#D4AF37" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- two fingers together -->
+    <path d="M60 18 C60 8, 66 6, 70 6 C74 6, 80 8, 80 18 L80 48" />
+    <path d="M68 18 C68 8, 74 6, 78 6 C82 6, 88 8, 88 18 L88 48" />
+    <!-- folded ring+pinkie -->
+    <path d="M52 40 C56 36, 58 44, 56 52 L56 62" />
+    <path d="M44 48 C48 44, 50 52, 48 60 L48 70" />
+    <!-- thumb -->
+    <path d="M34 60 C30 52, 26 48, 30 42 C34 36, 40 38, 46 44" />
+    <!-- palm -->
+    <path d="M36 72 C42 92, 58 102, 74 102 C90 102, 100 92, 100 72 C88 80, 72 84, 58 84 C44 84, 36 78, 36 72 Z" />
+  </g>
+</svg>
