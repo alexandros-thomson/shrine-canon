@@ -1,0 +1,18 @@
+# Generated audit scrolls and summaries
+audit-scrolls/
+monthly-summaries/
+
+# Temporary files
+*.tmp
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

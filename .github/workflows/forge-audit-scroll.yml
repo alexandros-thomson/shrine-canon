@@ -1,0 +1,67 @@
+name: Forge Audit Scroll
+
+on:
+  push:
+    branches: [ "main" ]
+  release:
+    types: [ published ]
+  workflow_dispatch:    # Manual trigger for testing
+
+permissions:
+  contents: read
+
+jobs:
+  forge-audit-scroll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout canon
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq gawk
+
+      - name: Verify dependencies
+        run: |
+          jq --version
+          gawk --version
+          echo "Dependencies installed successfully"
+
+      - name: Run forge audit scroll script
+        env:
+          LIVE_URL: ${{ secrets.LIVE_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          PATREON_CREATOR_TOKEN: ${{ secrets.PATREON_CREATOR_TOKEN }}
+          PATREON_CAMPAIGN_ID: ${{ secrets.PATREON_CAMPAIGN_ID }}
+          TIER_GOLD_KEY_ID: ${{ secrets.TIER_GOLD_KEY_ID }}
+          TIER_FOUNDING_ID: ${{ secrets.TIER_FOUNDING_ID }}
+          TIER_OUTER_ID: ${{ secrets.TIER_OUTER_ID }}
+        run: |
+          echo "🏛️ Forging Audit Scroll in live mode..."
+          ./forge-audit-scroll.sh
+
+      - name: Upload Audit Scrolls
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit-scrolls-${{ github.run_number }}
+          path: |
+            audit-scrolls/
+          retention-days: 30
+
+      - name: Upload Monthly Summaries  
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: monthly-summaries-${{ github.run_number }}
+          path: |
+            monthly-summaries/
+          retention-days: 90
+
+      - name: Display completion status
+        if: always()
+        run: |
+          echo "🏛️ Forge Audit Scroll workflow completed"
+          echo "📜 Audit scrolls and monthly summaries have been uploaded as artifacts"
+          echo "⚖️ Canon preservation ritual complete"
