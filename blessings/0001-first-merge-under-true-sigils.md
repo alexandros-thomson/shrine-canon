@@ -4,7 +4,7 @@
 **Relic ID:** 0001  
 **Type:** First Merge  
 **Blessing:** Under True Sigils  
-**Date of Consecration:** [Ceremonial Timestamp]  
+**Date of Consecration:** 2024-06-07T12:00:00Z  
 
 ---
 
