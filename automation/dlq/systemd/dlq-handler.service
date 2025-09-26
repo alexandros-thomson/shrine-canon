@@ -1,0 +1,17 @@
+[Unit]
+Description=DLQ Handler - Temple
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=temple
+Group=temple
+EnvironmentFile=/etc/temple/ledger.env
+ExecStart=/usr/local/bin/dlq_handler.sh
+Nice=10
+TimeoutStartSec=1200
+ProtectSystem=full
+ProtectHome=true
+PrivateTmp=true
+NoNewPrivileges=true

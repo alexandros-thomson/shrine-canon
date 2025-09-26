@@ -1,0 +1,11 @@
+[Unit]
+Description=Run DLQ Handler every 15 minutes (balanced)
+
+[Timer]
+OnCalendar=*:0/15
+Persistent=true
+RandomizedDelaySec=1m
+AccuracySec=1m
+
+[Install]
+WantedBy=timers.target
