@@ -146,6 +146,27 @@ Run the script: `node trinity-eternal-automation.js`
 
 Alternatively, start directly: `pm2 start trinity-eternal-automation.js --name trinity-automation`
 
+### Monitoring and Logs
+
+To monitor logs and ensure the automation loop runs continuously:
+
+```bash
+pm2 logs trinity-orchestrator
+```
+
+Or for centralized performance monitoring:
+
+```bash
+pm2 monit
+```
+
+This setup ensures that your Trinity Automation:
+
+- Loads secrets securely from .env.
+- Runs continuously via PM2 with graceful restart handling.
+- Maintains separate environments (development, production).
+- Persists logs and metrics for historical analytics.
+
 ### Continuous Token Renewal Workflow (Optional n8n Module)
 
 If you want an external failsafe:
