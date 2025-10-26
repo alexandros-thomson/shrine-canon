@@ -140,9 +140,11 @@ Run the script: `node trinity-eternal-automation.js`
 ### Deployment with PM2
 
 1. Install PM2: `npm install -g pm2`
-2. Start the script: `pm2 start trinity-eternal-automation.js --name trinity-automation`
+2. Start the script using the ecosystem config: `pm2 start ecosystem.config.js --env production`
 3. Save the process: `pm2 save`
 4. Set up startup: `pm2 startup`
+
+Alternatively, start directly: `pm2 start trinity-eternal-automation.js --name trinity-automation`
 
 ### Continuous Token Renewal Workflow (Optional n8n Module)
 
