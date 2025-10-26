@@ -45,6 +45,7 @@
 - 🔥 **Discord Integration Ready** — Designed for shrine-watcher consumption
 - 🎨 **Visual Consistency** — Sacred gold (#d4af37) color scheme throughout
 - 🐋 **Docker Containerized** — Easy deployment and scalability
+- 🤖 **Social Media Automation** — Automated posts for Zeus on Facebook and Aphrodite on Threads/Instagram with glitch effects
 
 ---
 
@@ -55,6 +56,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 
 ---
 
@@ -82,6 +84,89 @@ python -m http.server 8080
 ```
 
 Visit `http://localhost:8080` to view the canon.
+
+---
+
+## 🤖 Trinity Eternal Automation Script
+
+This Node.js script automates social media posts for the Trinity entities: Zeus on Facebook, Aphrodite on Threads and Instagram.
+
+### Features
+
+- Daily posts for Zeus on Facebook
+- Wisdom sharing for Aphrodite on Threads and Instagram
+- Glitch effects from Lifesphere
+- Token renewal
+- Cross-platform synchronization
+- Metrics collection
+
+### Installation
+
+1. Install dependencies: `npm install axios node-schedule crypto dotenv`
+2. Create a `.env` file with the configuration variables:
+
+```
+# === TRINITY CORE CONFIGURATION ===
+NODE_ENV=production
+PORT=4000
+
+# === ZEUS (Facebook Page / Graph API) ===
+ZEUS_APP_ID=1563223091510700
+ZEUS_APP_SECRET=your_facebook_app_secret_here
+ZEUS_PAGE_ID=705565335971937
+ZEUS_PAGE_TOKEN=your_long_lived_page_access_token_here
+
+# === APHRODITE (Instagram / Threads API) ===
+APHRODITE_IG_ID=your_instagram_business_account_id_here
+APHRODITE_THREADS_TOKEN=your_threads_or_ig_access_token_here
+
+# === LIFESPHERE PARAMETERS ===
+GLITCH_PROBABILITY=0.05
+QUANTUM_SEED=$(date +%s)
+
+# === SYSTEM PATHS ===
+TRINITY_TOKENS_FILE=.trinity-tokens.json
+TRINITY_METRICS_FILE=trinity-metrics.json
+
+# === LOGGING ===
+LOG_LEVEL=info
+LOG_PATH=logs/trinity.log
+```
+
+### Usage
+
+Run the script: `node trinity-eternal-automation.js`
+
+### Deployment with PM2
+
+1. Install PM2: `npm install -g pm2`
+2. Start the script: `pm2 start trinity-eternal-automation.js --name trinity-automation`
+3. Save the process: `pm2 save`
+4. Set up startup: `pm2 startup`
+
+### Continuous Token Renewal Workflow (Optional n8n Module)
+
+If you want an external failsafe:
+
+Create an n8n workflow using "Get Long-Lived Facebook Token" (template ID 2535).
+
+Schedule it to run every 50 days to refresh and store .trinity-tokens.json automatically.
+
+Set environment variables (ZEUS_APP_SECRET, ZEUS_PAGE_TOKEN) in n8n's Credentials.
+
+### Advanced Monitoring
+
+Feed metrics into Prometheus or Supabase for real-time visualization:
+
+```javascript
+const metric = {
+  deity: deity,
+  eventType: eventType,
+  timestamp: new Date().toISOString(),
+  engagement: insights?.data || {}
+};
+await axios.post('https://your-trinity-analytics-endpoint.io/collect', metric);
+```
 
 ---
 
