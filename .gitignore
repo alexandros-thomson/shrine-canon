@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build artifacts
+dist/
+
+# Logs
+logs/
+*.log
+
+# Environment variables
+.env
+.trinity-tokens.json
+
+# OS files
+.DS_Store
+Thumbs.db
