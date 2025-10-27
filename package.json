@@ -1,17 +1,1 @@
-{
-  "name": "shrine-canon",
-  "version": "1.0.0",
-  "description": "Living canon of relics, badges, and ceremonial drops for the Basilica Gate",
-  "scripts": {
-    "postbuild": "node scripts/copy.js"
-  },
-  "devDependencies": {
-    "fs-extra": "^11.2.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexandros-thomson/shrine-canon.git"
-  },
-  "author": "alexandros-thomson",
-  "license": "SEE LICENSE IN LICENSE"
-}
+{"name":"shrine-canon","version":"1.0.0","description":"Living canon of relics, badges, and ceremonial drops for the Basilica Gate","scripts":{"postbuild":"cp docs/divine-trinity/*.{html,svg} dist/ 2>/dev/null || true"},"devDependencies":{"fs-extra":"^11.2.0"},"repository":{"type":"git","url":"git+https://github.com/alexandros-thomson/shrine-canon.git"},"author":"alexandros-thomson","license":"SEE LICENSE IN LICENSE"}
