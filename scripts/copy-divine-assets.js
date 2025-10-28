@@ -15,18 +15,21 @@ if (!fs.existsSync(dest)) {
   console.log('✨ Created dist directory');
 }
 
-// Copy HTML and SVG files
+// Copy asset files (HTML, SVG, JPG, PNG)
 let copied = 0;
 const files = fs.readdirSync(source);
 
 files.forEach(file => {
-  if (file.endsWith('.html') || file.endsWith('.svg')) {
+  if (file.endsWith('.html') || file.endsWith('.svg') || file.endsWith('.jpg') || file.endsWith('.png')) {
     const srcPath = path.join(source, file);
     const destPath = path.join(dest, file);
     
-    fs.copyFileSync(srcPath, destPath);
-    console.log(`✅ Copied: ${file}`);
-    copied++;
+    // Check if it's a file (not a directory)
+    if (fs.statSync(srcPath).isFile()) {
+      fs.copyFileSync(srcPath, destPath);
+      console.log(`✅ Copied: ${file}`);
+      copied++;
+    }
   }
 });
 
